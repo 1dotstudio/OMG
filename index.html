@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMG Burger | Order Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-color: #EF8584; 
+            --brand-dark: #1A1A1B;   
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--brand-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--brand-dark);
+        }
+
+        .cover-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cover-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            margin-top: -70px; 
+            padding: 0 20px 40px 20px;
+        }
+
+        .logo-wrapper {
+            width: 130px;
+            height: 130px;
+            background-color: var(--white);
+            border-radius: 50%;
+            margin: 0 auto 25px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--shadow);
+            border: 5px solid var(--white);
+            outline: 2px solid var(--white);
+            z-index: 2;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .headline-group {
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .sub-headline {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .selection-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .app-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--brand-dark);
+            transition: all 0.3s ease;
+        }
+
+        .icon-box {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: var(--white);
+            border-radius: 22%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px var(--shadow);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .icon-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-label {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        @media (hover: hover) {
+            .app-button:hover .icon-box {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .app-button:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px 0;
+        }
+
+        .social-icon {
+            font-size: 2.2rem;
+            color: var(--brand-dark);
+            text-decoration: none;
+        }
+
+        .credit {
+            margin-top: 15px;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cover-wrapper">
+        <img src="cover.png" alt="OMG Burger Cover">
+    </div>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="OMG Burger Logo"> 
+        </div>
+
+        <div class="headline-group">
+            <h1>READY TO GET WOW</h1>
+            <p class="sub-headline">omg burger and more</p>
+            <p class="selection-text">אתם בוחרים מאיפה להזמין</p>
+        </div>
+
+        <div class="apps-grid">
+            <a href="https://wolt.com/he/isr/haifa/restaurant/omg-burger" class="app-button" target="_blank">
+                <div class="icon-box">
+                    <img src="wolt.png" alt="Wolt">
+                </div>
+                <span class="app-label">Wolt</span>
+            </a>
+
+            <a href="https://haat.onelink.me/3ap7/hzbs1lpo" class="app-button" target="_blank">
+                <div class="icon-box">
+                    <img src="haat.png" alt="Haat">
+                </div>
+                <span class="app-label">Haat</span>
+            </a>
+        </div>
+
+        <footer>
+            <a href="https://www.instagram.com/omg.haifa/" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <p class="credit">Creative by 1dot Studio</p>
+        </footer>
+    </div>
+
+</body>
+</html>
